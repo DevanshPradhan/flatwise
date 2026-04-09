@@ -1,0 +1,83 @@
+{
+  "project_name": "Flat Ledger",
+  "theme": "Light",
+  "archetype": "1 (Organic & Earthy)",
+  "emotional_tone": "Transparent, friendly, organized, calm",
+  "design_system": {
+    "colors": {
+      "background": "#F9F8F6",
+      "surface": "#FFFFFF",
+      "primary": "#4A6741",
+      "primary_hover": "#3D5636",
+      "text_main": "#2D2C2A",
+      "text_muted": "#6B6862",
+      "border": "#E5E0D8",
+      "accent_expense": "#C25E3E",
+      "accent_income": "#4A6741",
+      "chart_palette": ["#4A6741", "#C25E3E", "#D99A5B", "#7BA4B6", "#E7C693"]
+    },
+    "typography": {
+      "heading_font": "Manrope",
+      "body_font": "IBM Plex Sans",
+      "h1": "text-4xl sm:text-5xl tracking-tight font-light",
+      "h2": "text-2xl sm:text-3xl tracking-tight font-medium",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm tracking-wide text-[#6B6862]"
+    },
+    "spacing_and_layout": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "section_padding": "py-12 md:py-20",
+      "card_padding": "p-6 sm:p-8",
+      "grid_dashboard": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+      "border_radius": "rounded-2xl"
+    },
+    "components": {
+      "cards": "bg-white border border-[#E5E0D8] rounded-2xl shadow-sm hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(45,44,42,0.08)] transition-all duration-300",
+      "buttons_primary": "bg-[#4A6741] text-white rounded-full px-6 py-2.5 font-medium hover:bg-[#3D5636] transition-colors focus:ring-2 focus:ring-[#4A6741] focus:ring-offset-2",
+      "buttons_secondary": "bg-[#F9F8F6] text-[#2D2C2A] border border-[#E5E0D8] rounded-full px-6 py-2.5 font-medium hover:bg-[#E5E0D8] transition-colors",
+      "inputs": "w-full border border-[#E5E0D8] rounded-xl px-4 py-3 bg-[#F9F8F6] focus:bg-white focus:border-[#4A6741] focus:ring-1 focus:ring-[#4A6741] transition-all text-[#2D2C2A]"
+    },
+    "icons": {
+      "library": "@phosphor-icons/react",
+      "style": "Duotone, size 24"
+    }
+  },
+  "media": {
+    "login_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/ebfa41e3-7583-46d7-a7ba-881a04922340/images/ae46d49e712b9a664179c5c4d0bb694eff2f7463e211efb8e58e460744956f60.png",
+      "description": "Abstract geometric earthy background for login screen"
+    },
+    "avatars": [
+      "https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwxfHx1c2VyJTIwYXZhdGFyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc1NzU3NDkzfDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1704726135027-9c6f034cfa41?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHx1c2VyJTIwYXZhdGFyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc1NzU3NDkzfDA&ixlib=rb-4.1.0&q=85",
+      "https://images.pexels.com/photos/7832476/pexels-photo-7832476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwzfHx1c2VyJTIwYXZhdGFyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc1NzU3NDkzfDA&ixlib=rb-4.1.0&q=85",
+      "https://images.pexels.com/photos/4565706/pexels-photo-4565706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    ]
+  },
+  "key_workflows_and_pages": {
+    "login": {
+      "layout": "Split screen: Left 50% for login form (white bg, centered), Right 50% for hero image (login_background) with absolute text overlay 'Shared living, simplified'.",
+      "elements": "Email/password inputs, login button, register link."
+    },
+    "dashboard": {
+      "header": "Sticky glassmorphism header (bg-white/70 backdrop-blur-xl), logo on left, current user profile on right.",
+      "summary_section": "Bento grid top row: 'Total Group Expenses (Current Month)', 'My Share', 'I Owe / I Am Owed'. Use large typography (text-4xl) for numbers. Currency is Indian Rupee (₹).",
+      "expense_feed": "List of recent expenses. Card format with icon (Phosphor), title, category, date, payer, amount. Include Edit/Delete actions in a dropdown menu (Shadcn).",
+      "split_view": "Visual bar or pie chart showing expense breakdown by category (Food, Utilities, Rent, Groceries, Entertainment).",
+      "add_expense_modal": "Shadcn Dialog. Form inputs: Title, Amount (₹), Category (Select), Payer (Current user fixed), Participants (Multi-checkbox for custom split)."
+    }
+  },
+  "testing_requirements": {
+    "data_testid": "All interactive elements must have a data-testid attribute in kebab-case (e.g., login-submit-button, add-expense-button, expense-item-edit-button)."
+  },
+  "developer_instructions": {
+    "1": "Use @phosphor-icons/react for icons.",
+    "2": "Avoid using default Shadcn styling blindly. Override card backgrounds to white, borders to #E5E0D8, and apply generous padding (p-6/p-8).",
+    "3": "Use pure HTML/Tailwind for the dashboard layout (Bento grid) to allow exact control over spacing.",
+    "4": "Ensure text contrast meets APCA/WCAG standards. Use #2D2C2A for main text.",
+    "5": "Do not implement placeholder media. Use the exact URLs provided in this JSON.",
+    "6": "Currency formatting must strictly use ₹ symbol and Indian number system (e.g., ₹ 1,50,000)."
+  }
+}
