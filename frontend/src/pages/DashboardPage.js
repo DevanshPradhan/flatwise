@@ -230,11 +230,11 @@ export default function DashboardPage() {
                   Add Expense
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-md" style={{ backgroundColor: '#FFFFFF', borderColor: '#E5E0D8' }}>
+              <DialogContent className="sm:max-w-md pointer-events-auto" style={{ backgroundColor: '#FFFFFF', borderColor: '#E5E0D8' }}>
                 <DialogHeader>
                   <DialogTitle style={{ fontFamily: 'Manrope, sans-serif', color: '#2D2C2A' }}>Add New Expense</DialogTitle>
                 </DialogHeader>
-                <form onSubmit={handleAddExpense} className="space-y-4" data-testid="add-expense-form">
+                <form onSubmit={handleAddExpense} className="space-y-4 pointer-events-auto" data-testid="add-expense-form">
                   <div>
                     <Label htmlFor="title" style={{ color: '#2D2C2A' }}>Title</Label>
                     <Input
